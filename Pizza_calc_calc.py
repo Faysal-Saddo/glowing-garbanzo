@@ -18,16 +18,16 @@ Pizza_price = 0
 pepperoni_status = "No pepperoni"
 cheese_status ="No cheese"
 
-if (pizza_size == "small" or pizza_size== "Small"):
+if  pizza_size == "small" or pizza_size== "Small":
     Bill = 100
     Pizza_price = 100
     
-    if(pizza_pepperoni == "yes"):
+    if pizza_pepperoni == "yes":
         Bill += 30
         Price_addition_pepperoni = 30
         pepperoni_status = "pepperoni"
 
-elif (pizza_size == "medium" or pizza_size== "Medium"):
+elif pizza_size == "medium" or pizza_size== "Medium":
     Bill = 200
     Pizza_price = 200
     if(pizza_pepperoni == "yes"):
@@ -35,7 +35,7 @@ elif (pizza_size == "medium" or pizza_size== "Medium"):
      Price_addition_pepperoni = 50
      pepperoni_status = "pepperoni"
 
-elif (pizza_size == "large" or pizza_size== "Large"):
+elif pizza_size == "large" or pizza_size== "Large":
     Bill = 300
     Pizza_price = 300
     if(pizza_pepperoni == "yes"):
@@ -43,15 +43,16 @@ elif (pizza_size == "large" or pizza_size== "Large"):
         Price_addition_pepperoni = 50
         pepperoni_status = "pepperoni"
 
-if(extra_cheese == "yes" or extra_cheese == "Yes"):
+if extra_cheese == "yes" or extra_cheese == "Yes":
     Bill += 20
-    Price_addition_cheese = 30
+    Price_addition_cheese = 20
     cheese_status="cheese"
 
-print(f"Your total bill is {Bill}\n{Pizza_price}+{Price_addition_pepperoni}({pepperoni_status})+{Price_addition_cheese}({cheese_status})")
-
-
-
-
-
-
+print("\n ===YOUR BILL===")
+print(f"Pizza    = {Pizza_price}") 
+if pepperoni_status == "pepperoni":
+    print(f"Pepperoni= {Price_addition_pepperoni}") 
+if cheese_status == "cheese":
+    print(f"Cheese   = {Price_addition_cheese}") 
+print(f"Bill     = {Bill}" )
+#{Pizza_price}+{Price_addition_pepperoni}({pepperoni_status})+{Price_addition_cheese}({cheese_status})")
